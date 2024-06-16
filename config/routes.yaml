@@ -1,0 +1,32 @@
+controllers:
+    # Define the directory path and namespace for controllers
+    resource:
+        path: ../src/Controller/
+        namespace: App\Controller
+    type: attribute
+
+# Route configuration for TaskController
+task_list:
+    path: /api/tasks/list
+    controller: App\Controller\TaskController::list
+    methods: GET
+
+task_create:
+    path: /api/task/create
+    controller: App\Controller\TaskController::create
+    methods: POST
+
+task_show:
+    path: /api/task/show/{id}
+    controller: App\Controller\TaskController::show
+    methods: GET
+
+task_update:
+    path: /api/task/update/{id}
+    controller: App\Controller\TaskController::update
+    methods: PUT
+
+task_delete:
+    path: /api/task/delete/{id}
+    controller: App\Controller\TaskController::delete
+    methods: DELETE
